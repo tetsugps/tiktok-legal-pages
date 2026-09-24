@@ -1,2 +1,34 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ComfyUI Video SNS Automation</title><style>body{font:16px/1.6 system-ui,sans-serif;max-width:760px;margin:4rem auto;padding:0 1rem;color:#222}a{color:#0759a5}</style></head><body><h1>ComfyUI Video SNS Automation</h1><p>A local Windows tool for generating short videos and preparing selected clips for TikTok draft upload. The creator reviews and publishes content in TikTok.</p><p><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></p></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ComfyUI Video SNS Automation</title>
+  <meta name="description" content="Documentation for an open-source Windows workflow that creates short videos and posts selected clips through official social platform APIs.">
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #172033; background: #f7f9fc; }
+    body { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; line-height: 1.65; }
+    h1, h2 { line-height: 1.25; }
+    h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: .4rem; }
+    h2 { margin-top: 2rem; }
+    a { color: #0759a5; }
+    .intro { font-size: 1.12rem; }
+    .card { background: white; border: 1px solid #dbe2ec; border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1rem 0; }
+    nav a { margin-right: 1.2rem; }
+    footer { margin-top: 3rem; border-top: 1px solid #dbe2ec; padding-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ComfyUI Video SNS Automation</h1>
+    <p class="intro">An open-source Windows workflow for generating short videos and publishing selected clips to connected social accounts.</p>
+    <nav aria-label="Site navigation"><a href="#workflow">Workflow</a><a href="#tiktok">TikTok integration</a><a href="#getting-started">Get started</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></nav>
+  </header>
+  <main>
+    <section id="workflow" class="card"><h2>What the project does</h2><p>The workflow creates videos with a local ComfyUI installation, sends status notifications through Telegram, and can publish approved output to YouTube, Instagram Reels, and TikTok. Each social platform is configured separately. Posting is disabled until the operator sets up credentials and enables it.</p><p>The source code and setup instructions are available in the <a href="https://github.com/tetsugps/comfyui-video-sns-automation">GitHub repository</a>.</p></section>
+    <section id="tiktok" class="card"><h2>TikTok integration</h2><ol><li>The operator connects a TikTok account through TikTok Login Kit and grants the requested permissions.</li><li>The operator prepares a video, caption, and privacy setting in the local workflow.</li><li>The app checks the creator's available posting options, uploads the MP4 through the Content Posting API, and checks the publishing status.</li><li>The local log and Telegram notification report the result.</li></ol><p>Before TikTok approves the app for public posting, API posts may be limited to private visibility. The integration is being prepared for TikTok review; this page does not offer a hosted posting service.</p></section>
+    <section id="getting-started" class="card"><h2>Get started</h2><p>Install the project on a Windows machine with a working ComfyUI setup. Follow the repository README for configuration, local credential storage, and platform-specific requirements. Use an account you control for authorization and review each platform's posting settings before enabling automation.</p><p>Questions and project feedback can be raised through <a href="https://github.com/tetsugps/comfyui-video-sns-automation/issues">GitHub Issues</a>.</p></section>
+  </main>
+  <footer><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="https://github.com/tetsugps/comfyui-video-sns-automation">Source code</a></footer>
+</body>
+</html>
